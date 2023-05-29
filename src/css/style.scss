@@ -1,0 +1,240 @@
+
+@import "default";
+
+body{
+  background: #FFF7ED;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+
+  &>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+      height: 80px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    nav{
+      display: flex;
+      gap: 20px;
+
+      a{
+        text-decoration: none;
+        font-size: 18px;
+        color: #000;
+
+        &.active{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.home{
+  width: 100%;
+  min-height: 400px;
+  height: calc(100vh - 180px);
+  padding-top: 40px;
+  background-image: url("../assets/image 53.png");
+  color: #fff;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+  }
+
+  &>*{
+    position: relative;
+    z-index: 1;
+  }
+
+  h1{
+    font-weight: 800;
+  }
+
+  p{
+    margin-bottom: 40px;
+  }
+
+  button{
+    width: 100%;
+    height: 45px;
+    background: #FF8C38;
+    color: #fff;
+
+  }
+
+
+}
+
+.about{
+  .cover{
+    width: 100%;
+    height: 200px;
+    background-image: url("../assets/image 55.png");
+    background-size: cover;
+  }
+  h1{
+    font-size: 24px;
+  }
+  p{
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  
+  .card{
+    background: #FFCC8D;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    h2{
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    button{
+      color: #fff;
+      background: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+}
+
+.vans{
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  .filters{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .filters-container{
+      display: flex;
+      gap: 20px;
+      .filter-item{
+        background: #FFEAD0;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    }
+  }
+  .vans-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .van-item{
+      width: 210px;
+      overflow: hidden;
+      border-radius: 8px;
+      height: fit-content;
+      .thumbnail{
+        width: 100%;
+        height: 210px;
+        img{
+          width: 100%;
+        }
+      }
+      .data-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title{
+          font-weight: bold;
+          margin: 10px 0;
+        }
+        .price-container{
+          position: relative;
+          span{
+            &.price{
+              font-weight: bold;
+              font-size: 18px;
+            }
+            &.duration{
+              position: absolute;
+              bottom: -20px;
+              right: 0;
+              font-size: 14px;
+              opacity: .6;
+            }
+          }
+        }
+      }
+      .label{
+        width: fit-content;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: #fff;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+
+        &.simple{
+          background: #E17654;
+        }
+        &.luxury{
+          background: #161616;
+        }
+        &.rugged{
+           background: #115E59;
+         }
+
+      }
+    }
+  }
+}
+
+.van-details{
+  .cover{
+    width: 100%;
+    height: 300px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h1, p{
+    margin-bottom: 40px;
+  }
+
+}
+
+footer{
+  height: 80px;
+  background: #252525;
+  color: #fff;
+  &>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .4;
+  }
+}
