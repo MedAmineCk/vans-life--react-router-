@@ -43,6 +43,10 @@ header{
   }
 }
 
+main{
+  min-height: calc(100vh - 180px);
+}
+
 .home{
   width: 100%;
   min-height: 400px;
@@ -236,5 +240,19 @@ footer{
     justify-content: center;
     align-items: center;
     opacity: .4;
+  }
+}
+
+//hosts
+nav.host-nav a{
+  text-decoration: none;
+  color: #000;
+  opacity: .8;
+  margin-right: 20px;
+
+  &.active{
+    text-decoration: underline;
+    opacity: 1;
+    font-weight: bolder;
   }
 }
