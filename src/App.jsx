@@ -21,9 +21,13 @@ function App() {
                     <Route index element={<Home/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="about" element={<About/>}/>
-                    <Route path="vans" element={<Vans/>}/>
-                    <Route path="vans/:id" element={<VanDetails/>}/>
-                    
+
+
+                    <Route path="vans">
+                        <Route index element={<Vans/>}/>
+                        <Route path=":id" element={<VanDetails/>}/>
+                    </Route>
+
                     <Route path="host" element={<HostLayout/>}>
                         <Route index element={<Dashboard/>}/>
                         <Route path="income" element={<Income/>}/>
