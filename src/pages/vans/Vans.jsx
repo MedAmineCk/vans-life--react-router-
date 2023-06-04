@@ -13,7 +13,7 @@ function Vans() {
     const vanElements = vans.map(van => (
 
         <div className="van-item" key={van.id}>
-            <Link to={`/vans/${van.id}`}>
+            <Link to={`${van.id}`}>
                 <div className="thumbnail">
                     <img src={van.imageUrl} alt=""/>
                 </div>

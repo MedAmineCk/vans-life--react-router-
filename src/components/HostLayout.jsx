@@ -1,11 +1,13 @@
 import HostNavBar from "./HostNavBar";
 import {Outlet} from "react-router-dom";
 
-export function HostLayout() {
+export default function HostLayout() {
     return (
         <>
-            <HostNavBar/>
-            <Outlet/>
+            <div className="section-container">
+                <HostNavBar/>
+                <Outlet/>
+            </div>
         </>
     )
 }

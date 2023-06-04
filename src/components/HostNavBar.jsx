@@ -1,13 +1,12 @@
-import {NavLink, useLocation} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export default function HostNavBar() {
     return (
-        <div className="section-container">
-            <nav className="host-nav">
-                <NavLink className={({isActive}) => isActive ? 'active' : null} end to="/host">Dashboard</NavLink>
-                <NavLink className={({isActive}) => isActive ? 'active' : null} to="/host/income">Income</NavLink>
-                <NavLink className={({isActive}) => isActive ? 'active' : null} to="/host/reviews">Reviews</NavLink>
-            </nav>
-        </div>
+        <nav className="host-nav">
+            <NavLink className={({isActive}) => isActive ? 'active' : null} end to=".">Dashboard</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active' : null} to="income">Income</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active' : null} to="vans">Vans</NavLink>
+            <NavLink className={({isActive}) => isActive ? 'active' : null} to="reviews">Reviews</NavLink>
+        </nav>
     )
 }

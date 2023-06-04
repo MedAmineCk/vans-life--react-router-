@@ -1,41 +1,41 @@
-
 @import "default";
 
-body{
+body {
   background: #FFF7ED;
 }
 
-header{
+header {
   width: 100%;
   height: 100px;
 
-  &>div{
+  & > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .logo{
+    .logo {
       height: 80px;
       width: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
-      img{
+
+      img {
         max-width: 100%;
         max-height: 100%;
       }
     }
 
-    nav{
+    nav {
       display: flex;
       gap: 20px;
 
-      a{
+      a {
         text-decoration: none;
         font-size: 18px;
         color: #000;
 
-        &.active{
+        &.active {
           text-decoration: underline;
         }
       }
@@ -43,11 +43,11 @@ header{
   }
 }
 
-main{
+main {
   min-height: calc(100vh - 180px);
 }
 
-.home{
+.home {
   width: 100%;
   min-height: 400px;
   height: calc(100vh - 180px);
@@ -56,7 +56,7 @@ main{
   color: #fff;
   position: relative;
 
-  &::before{
+  &::before {
     content: '';
     position: absolute;
     z-index: 0;
@@ -68,20 +68,20 @@ main{
     opacity: 0.4;
   }
 
-  &>*{
+  & > * {
     position: relative;
     z-index: 1;
   }
 
-  h1{
+  h1 {
     font-weight: 800;
   }
 
-  p{
+  p {
     margin-bottom: 40px;
   }
 
-  button{
+  button {
     width: 100%;
     height: 45px;
     background: #FF8C38;
@@ -92,32 +92,35 @@ main{
 
 }
 
-.about{
-  .cover{
+.about {
+  .cover {
     width: 100%;
     height: 200px;
     background-image: url("../assets/image 55.png");
     background-size: cover;
   }
-  h1{
+
+  h1 {
     font-size: 24px;
   }
-  p{
+
+  p {
     font-size: 14px;
     margin-bottom: 40px;
   }
-  
-  .card{
+
+  .card {
     background: #FFCC8D;
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 4px;
-    h2{
+
+    h2 {
       margin-bottom: 20px;
       font-size: 18px;
     }
-    
-    button{
+
+    button {
       color: #fff;
       background: #000;
       padding: 10px 20px;
@@ -127,20 +130,23 @@ main{
   }
 }
 
-.vans{
-  a{
+.vans {
+  a {
     text-decoration: none;
     color: #000;
   }
-  .filters{
+
+  .filters {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .filters-container{
+
+    .filters-container {
       display: flex;
       gap: 20px;
-      .filter-item{
+
+      .filter-item {
         background: #FFEAD0;
         padding: 10px 20px;
         border-radius: 4px;
@@ -148,38 +154,47 @@ main{
       }
     }
   }
-  .vans-container{
+
+  .vans-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    .van-item{
+
+    .van-item {
       width: 210px;
       overflow: hidden;
       border-radius: 8px;
       height: fit-content;
-      .thumbnail{
+
+      .thumbnail {
         width: 100%;
         height: 210px;
-        img{
+
+        img {
           width: 100%;
         }
       }
-      .data-container{
+
+      .data-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .title{
+
+        .title {
           font-weight: bold;
           margin: 10px 0;
         }
-        .price-container{
+
+        .price-container {
           position: relative;
-          span{
-            &.price{
+
+          span {
+            &.price {
               font-weight: bold;
               font-size: 18px;
             }
-            &.duration{
+
+            &.duration {
               position: absolute;
               bottom: -20px;
               right: 0;
@@ -189,7 +204,8 @@ main{
           }
         }
       }
-      .label{
+
+      .label {
         width: fit-content;
         margin-bottom: 20px;
         padding: 5px 10px;
@@ -200,42 +216,47 @@ main{
           text-transform: uppercase;
         }
 
-        &.simple{
+        &.simple {
           background: #E17654;
         }
-        &.luxury{
+
+        &.luxury {
           background: #161616;
         }
-        &.rugged{
-           background: #115E59;
-         }
+
+        &.rugged {
+          background: #115E59;
+        }
 
       }
     }
   }
 }
 
-.van-details{
-  .cover{
+.van-details {
+  .cover {
     width: 100%;
     height: 300px;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  h1, p{
+
+  h1, p {
     margin-bottom: 40px;
   }
 
 }
 
-footer{
+footer {
   height: 80px;
   background: #252525;
   color: #fff;
-  &>div{
+
+  & > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,15 +265,97 @@ footer{
 }
 
 //hosts
-nav.host-nav a{
-  text-decoration: none;
-  color: #000;
-  opacity: .8;
-  margin-right: 20px;
+nav.host-nav {
+  margin-bottom: 20px;
 
-  &.active{
-    text-decoration: underline;
-    opacity: 1;
-    font-weight: bolder;
+  a {
+    text-decoration: none;
+    color: #000;
+    opacity: .8;
+    margin-right: 20px;
+
+    &.active {
+      text-decoration: underline;
+      opacity: 1;
+      font-weight: bolder;
+    }
   }
 }
+
+.vans_host-container {
+  .van-item {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
+
+    .thumbnail {
+      $size: 60px;
+      width: $size;
+      height: $size;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-right: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      .name {
+        font-weight: bold;
+      }
+
+      .price {
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.vans_host_details-container {
+  a.back-link {
+    text-decoration: underline;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .details-container {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    .header {
+      display: flex;
+      margin-bottom: 20px;
+      .thumbnail{
+        $size: 100px;
+        width: $size;
+        height: $size;
+        margin-right: 20px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .details_nav-container{
+      display: flex;
+      gap: 20px;
+
+      a.active{
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
