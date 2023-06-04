@@ -43,7 +43,7 @@ function Vans() {
                     <div className="clear">Clear Filters</div>
                 </div>
                 <div className="vans-container">
-                    {vanElements}
+                    {vanElements.length > 0 ? vanElements : <h1>Loading..</h1>}
                 </div>
             </div>
         </div>
