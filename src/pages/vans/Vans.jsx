@@ -1,7 +1,11 @@
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 
 function Vans() {
+
+    const [searchParams, setSearchParams]  = useSearchParams();
+    const filterType = searchParams.get('type')
+    console.log(filterType)
 
     const [vans, setVans] = useState([]);
     useEffect(() => {
@@ -10,8 +14,9 @@ function Vans() {
             .then(data => setVans(data.vans))
     }, []);
 
-    const vanElements = vans.map(van => (
+    const filtredVans = filterType ? vans.filter(van => van.type.toLowerCase() === filterType) : vans;
 
+    const vanElements = filtredVans.map(van => (
         <div className="van-item" key={van.id}>
             <Link to={`${van.id}`}>
                 <div className="thumbnail">
@@ -36,11 +41,11 @@ function Vans() {
                 <h1>Explore our van options</h1>
                 <div className="filters">
                     <div className="filters-container">
-                        <div className="filter-item">Simple</div>
-                        <div className="filter-item">Luxury</div>
-                        <div className="filter-item">Rugged</div>
+                        <Link to="?type=simple" className="filter-item">Simple</Link>
+                        <Link to="?type=luxury" className="filter-item">Luxury</Link>
+                        <Link to="?type=rugged" className="filter-item">Rugged</Link>
                     </div>
-                    <div className="clear">Clear Filters</div>
+                    <Link to="." className="clear">Clear Filters</Link>
                 </div>
                 <div className="vans-container">
                     {vanElements.length > 0 ? vanElements : <h1>Loading..</h1>}
