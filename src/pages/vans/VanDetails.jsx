@@ -1,5 +1,6 @@
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {MdKeyboardBackspace} from "react-icons/md";
 
 export default function VanDetails() {
 
@@ -18,6 +19,11 @@ export default function VanDetails() {
         <div className="van-details">
             {van ? (
                 <div className="section-container">
+                    <Link to=".." relative="path" className="back-link">
+                        <MdKeyboardBackspace/>
+                        Back to all vans</Link>
+                    <br/>
+                    <br/>
                     <div className="cover">
                         <img src={van.imageUrl}/>
                     </div>
