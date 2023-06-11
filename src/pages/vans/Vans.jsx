@@ -41,11 +41,14 @@ function Vans() {
                 <h1>Explore our van options</h1>
                 <div className="filters">
                     <div className="filters-container">
-                        <Link to="?type=simple" className="filter-item">Simple</Link>
-                        <Link to="?type=luxury" className="filter-item">Luxury</Link>
-                        <Link to="?type=rugged" className="filter-item">Rugged</Link>
+                        <button onClick={()=> setSearchParams({type: 'simple'})} className={`filter-item simple ${filterType === 'simple' ? 'selected' : ''}`}>Simple</button>
+                        <button onClick={()=> setSearchParams({type: 'luxury'})} className={`filter-item luxury ${filterType === 'luxury' ? 'selected' : ''}`}>Luxury</button>
+                        <button onClick={()=> setSearchParams({type: 'rugged'})} className={`filter-item rugged ${filterType === 'rugged' ? 'selected' : ''}`}>Rugged</button>
                     </div>
-                    <Link to="." className="clear">Clear Filters</Link>
+                    {filterType ? (
+                        <Link onClick={()=> setSearchParams({})}  className="clear">Clear Filters</Link>
+                    ) : null}
+
                 </div>
                 <div className="vans-container">
                     {vanElements.length > 0 ? vanElements : <h1>Loading..</h1>}

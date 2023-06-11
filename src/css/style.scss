@@ -151,6 +151,21 @@ main {
         padding: 10px 20px;
         border-radius: 4px;
         font-size: 14px;
+
+        &:hover, &.selected{
+          color: #fff;
+          &.simple {
+            background: #E17654;
+          }
+
+          &.luxury {
+            background: #161616;
+          }
+
+          &.rugged {
+            background: #115E59;
+          }
+        }
       }
     }
   }
